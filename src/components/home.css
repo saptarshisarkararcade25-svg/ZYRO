@@ -341,3 +341,10 @@ button:hover #clip {
     padding: 20px;
   }
 }
+@media (max-width: 768px) {
+    /* Scale down the massive logo text */
+    .logo-text {
+        font-size: 3.5rem !important;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }}
