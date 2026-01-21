@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.a {
+  background-color: rgb(15 23 42) !important;
+  --bs-navbar-color: rgba(245, 245, 245, 0.84);
+  --bs-navbar-hover-color: rgb(57 255 20);
+  box-shadow: 0 2px 3px gray;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.navbar-brand {
+  color: aliceblue;
+  --bs-navbar-brand-hover-color: aliceblue;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 21vh;
+  margin-left: 2ch;
+}
+.navbar-brand span:last-child {
+  color: rgb(57 255 20);
+}
+.navbar-nav {
+  margin-left: 150px;
+  width: 100%;
+  justify-content: space-around;
+  font-weight: 500;
+}
+.s {
+  background-color: rgb(57 255 20);
+  color: black;
+  font-weight: 700;
+  width: 25vh;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  height: fit-content;
+}
+.s:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.hero {
+  background-color: #0d1621; /* Dark navy background */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Badge Styling */
+.badge {
+  display: inline-block;
+  border: 1px solid #1a3a2a;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #24ff00;
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Heading Styling */
+.logo-text {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.logo-text span {
+  color: #39ff14; /* Neon Green */
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.5rem;
+  color: #b0b8c1;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #39ff14;
+  font-weight: 500;
+}
+/* Buttons */
+.btn-group {
+  gap: 60px;
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*-------------BUTTON 1------------*/
+/* From Uiverse.io by Navarog21 - Modified for Yellow-Green Palette */ 
+button {
+  position: relative;
+  width: 13em;
+  height: 5em;
+  outline: none;
+  transition: 0.1s;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: #f0f5e1; 
+  margin-top: 5px;
+}
+
+#clip {
+  --color: #99cc33; /* Primary Yellow-Green */
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px double var(--color);
+  box-shadow: inset 0px 0px 15px #6b8e23; /* Olive/Forest shadow */
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.arrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: #99cc33; /* Primary Yellow-Green */
+  top: 35%;
+  width: 11%;
+  height: 30%;
+}
+
+#leftArrow {
+  left: -13.5%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+  left: 102%;
+}
+
+button:hover #rightArrow {
+  background-color: #3af012; /* Brighter Lime on hover */
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+button:hover #leftArrow {
+  background-color: #3af012; /* Brighter Lime on hover */
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: #3af012;
+  box-shadow: inset 1px 1px 8px #b6e64d;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+#rightTop {
+  top: -1.98em;
+  left: 91%;
+}
+
+#leftTop {
+  top: -1.96em;
+  left: -3.0em;
+}
+
+#leftBottom {
+  top: 2.10em;
+  left: -2.15em;
+}
+
+#rightBottom {
+  top: 45%;
+  left: 88%;
+}
+
+button:hover #leftTop, 
+button:hover #rightTop, 
+button:hover #rightBottom, 
+button:hover #leftBottom {
+  /* Combined timing/animations for clarity */
+  animation: 0.1s ease-in-out both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+/* Staggered starts preserved */
+button:hover #leftTop { animation-delay: 0.05s, 0.4s; }
+button:hover #rightTop { animation-delay: 0.15s, 0.4s; }
+button:hover #rightBottom { animation-delay: 0.25s, 0.4s; }
+button:hover #leftBottom { animation-delay: 0.35s, 0.4s; }
+
+button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+/* 
+button:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: #3af012;
+} */
+
+@keyframes changeColor8 {
+  from { background-color: #0bbd23; }
+  to { background-color: #3af012; }
+}
+
+@keyframes lightEffect8 {
+  from { box-shadow: 1px 1px 5px #3af012; }
+  to { box-shadow: 0 0 2px #3af012; }
+}
+
+@keyframes greenLight8 {
+  to { box-shadow: inset 0px 0px 32px #3af012;}}
+/*----------------BUTTON 2------------------*/
+.button {
+  width: 160px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  /* margin-top: 10px; */
+  align-items: center;
+  border: 1px solid #09cd13;
+  background-color: #03d12c;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: #111111;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #08e735;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.button .svg {
+  width: 20px;
+  fill: #090909;
+}
+
+.button:hover {
+  background: #08e735;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #08e735;
+}
+
+.button:active {
+  border: 1px solid #08e735;
+}
+/* Timer Card */
+.timer-card {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px 50px;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #6d7a89;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .logo-text {
+    font-size: 3.5rem;
+  }
+  .btn-group {
+    flex-direction: column;
+  }
+  .timer-card {
+    padding: 20px;
+  }
+}
